@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F89-cG-Lgv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Route-->
+        <scene sceneID="Wik-Cw-nIN">
+            <objects>
+                <viewController title="Route" id="wqv-TT-awn" customClass="RouteViewController" customModule="Rush01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRF-AU-EVK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Gi0-Oz-s5K">
+                                <rect key="frame" x="0.0" y="346.5" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JtL-Pb-Jxi">
+                                <rect key="frame" x="0.0" y="454.5" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYS-3C-8PH">
+                                <rect key="frame" x="196.5" y="417.5" width="21" height="22"/>
+                                <state key="normal" image="arrow.swap" catalog="system"/>
+                                <connections>
+                                    <action selector="swapCoordinate:" destination="wqv-TT-awn" eventType="touchUpInside" id="PQ9-4Q-GSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uju-F7-WSv">
+                                <rect key="frame" x="0.0" y="510.5" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WMp-zU-xPG"/>
+                                </constraints>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="routeMe:" destination="wqv-TT-awn" eventType="touchUpInside" id="yba-UM-9Y9"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-lH-h50">
+                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="bkb-AI-29R">
+                                        <barButtonItem key="rightBarButtonItem" title="Clean" id="O9g-xw-xaW">
+                                            <connections>
+                                                <action selector="cleanInput:" destination="wqv-TT-awn" id="r5o-Iz-JDK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HYS-3C-8PH" firstAttribute="top" secondItem="Gi0-Oz-s5K" secondAttribute="bottom" constant="15" id="0b1-zx-NG3"/>
+                            <constraint firstItem="Uju-F7-WSv" firstAttribute="leading" secondItem="oGO-mF-OKx" secondAttribute="leading" id="GN0-lz-p9X"/>
+                            <constraint firstItem="HYS-3C-8PH" firstAttribute="centerY" secondItem="oGO-mF-OKx" secondAttribute="centerY" id="WbS-6y-4kJ"/>
+                            <constraint firstItem="HYS-3C-8PH" firstAttribute="centerX" secondItem="oGO-mF-OKx" secondAttribute="centerX" id="aRn-e1-aw9"/>
+                            <constraint firstItem="Uju-F7-WSv" firstAttribute="top" secondItem="JtL-Pb-Jxi" secondAttribute="bottom" id="f2H-fu-Gtg"/>
+                            <constraint firstItem="JtL-Pb-Jxi" firstAttribute="top" secondItem="HYS-3C-8PH" secondAttribute="bottom" constant="15" id="fMI-4l-XC8"/>
+                            <constraint firstItem="JtL-Pb-Jxi" firstAttribute="leading" secondItem="BRF-AU-EVK" secondAttribute="leading" id="qCl-cs-tqM"/>
+                            <constraint firstItem="oGO-mF-OKx" firstAttribute="trailing" secondItem="JtL-Pb-Jxi" secondAttribute="trailing" id="rcL-Vn-5tr"/>
+                            <constraint firstItem="oGO-mF-OKx" firstAttribute="trailing" secondItem="Gi0-Oz-s5K" secondAttribute="trailing" id="suJ-eV-TmO"/>
+                            <constraint firstItem="Gi0-Oz-s5K" firstAttribute="leading" secondItem="BRF-AU-EVK" secondAttribute="leading" id="ux1-b9-mUu"/>
+                            <constraint firstItem="oGO-mF-OKx" firstAttribute="trailing" secondItem="Uju-F7-WSv" secondAttribute="trailing" id="wta-j0-BVF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oGO-mF-OKx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Route" image="location.north" catalog="system" id="Btc-zQ-dYT"/>
+                    <connections>
+                        <outlet property="fstSB" destination="Gi0-Oz-s5K" id="56R-JJ-q7M"/>
+                        <outlet property="secSB" destination="JtL-Pb-Jxi" id="bXw-Pb-vLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDT-jn-IRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="163"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Eg1-pd-GLZ">
+            <objects>
+                <viewController title="Map" id="gjY-Y9-AgW" customClass="MapViewController" customModule="Rush01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7JU-d4-PMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yvy-YL-l8O"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="kce-Jb-pXd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKM-wy-3fG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="-487"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7td-d6-G7D">
+            <objects>
+                <tabBarController id="F89-cG-Lgv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wcK-YH-uOP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gjY-Y9-AgW" kind="relationship" relationship="viewControllers" id="3RV-ua-aPx"/>
+                        <segue destination="wqv-TT-awn" kind="relationship" relationship="viewControllers" id="ocY-cj-afo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcY-f8-mo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="-163"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.swap" catalog="system" width="64" height="50"/>
+        <image name="location.north" catalog="system" width="54" height="64"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
