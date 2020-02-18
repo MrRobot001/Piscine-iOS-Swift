@@ -94,7 +94,7 @@ class MapViewController: UIViewController {
         print(a_coordinate_string)
         print(b_coordinate_string)
         
-        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(a_coordinate_string)&destination=\(b_coordinate_string)&mode=drive&key=AIzaSyA72X6hef7XBu18B4_ZrLDpEUfiBNYEgLk&"
+        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(a_coordinate_string)&destination=\(b_coordinate_string)&mode=drive&key=AIzaSyA72X6hef7XBu18B4_XXXXXXXXXXXXXXXX&"
         
         Alamofire.request(urlString).responseJSON { response in
             
